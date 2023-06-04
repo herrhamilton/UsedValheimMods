@@ -1,4 +1,28 @@
 # Changelog
+
+## Version 2.11.7
+* Added Valheim network version check to the disconnect window to better identify the cause of a disconnect. Only visible if both server and client are running Jotunn 2.11.7 or higher
+* Removed the Valheim version string check from the disconnect window, as the network version is used for the version check
+
+## Version 2.11.6
+* Fixed an issue with custom category tabs where the hammer menu wouldn't open when using a controller
+
+## Version 2.11.5
+* Fixed custom category tabs caused errors after relogging
+
+## Version 2.11.4
+* Added the magic string `(HiddenCategory)` to disabled category tab names, so other mods can detect them easier
+* Changed that vanilla tabs are always enabled for vanilla tools and only Jotunn managed and vanilla tabs can be disabled
+
+## Version 2.11.3
+* Compatible with Valheim version 0.214.300 and the upcoming 0.215.1 patch
+* Fixed a client with a different Valheim version will no longer be additionally disconnected by Jötunn. If the player was disconnected, a mismatching Valheim version will still be displayed
+* Fixed side-loaded localisations being loaded too early, causing translations to be added to the internal Jötunn localisation instead of the respective mod
+* Fixed custom hammer tabs had the wrong size when being localised
+* Fixed scroll of last custom hammer tab was not correct
+* Fixed a compatibility issue with Auga because of the changed hammer tabs
+* Slightly improved loading time of big mod packs by caching mod info used when creating custom entities
+
 ## Version 2.11.2
 * Compatible with Valheim version 0.214.300
 

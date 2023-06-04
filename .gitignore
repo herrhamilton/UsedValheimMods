@@ -6,3 +6,6 @@ steam_appid.txt
 UnityCrashHandler64.exe
 UnityPlayer.dll
 valheim.exe
+
+BepInEx/cache
+BepInEx/LogOutput.log

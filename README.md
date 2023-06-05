@@ -1,6 +1,8 @@
 # UsedValheimMods
 private helper repo to sync Valheim mods between clients
 
+Valheim version: 0.215.2
+
 ## Installed Mods
 
 - [BepInEx 5.4.2105](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)

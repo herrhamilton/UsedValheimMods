@@ -1,5 +1,25 @@
 # Changelog
 
+## Version 2.12.1
+* Fixed compatibility issues with the custom hammer tabs when Auga is installed. There will be some warnings as some visual changes can't be applied but these should not affect the functionality
+
+## Version 2.12.0
+* Compatible with Valheim version 0.216.9, not working with an older version
+* Added prefab name helpers for CookingStations, CraftingStations, Fermenters, Incinerators, PieceCategories, PieceTables and Smelters
+* Added `CustomPiece.Category` helper property to make it easier to set the piece category at runtime.
+* Added `PieceManager.Instance.GetPieceCategoriesMap` to get a complete map of all piece categories
+* Reworked custom piece categories to be compatible with other mods. This changes some internal category ids
+* Changed custom hammer tabs to stack instead of scroll. Tabs also no longer have a dynamic width, instead the text tires to fit the tab
+* Changed `PieceManager.GetPieceCategories` to be obsolete, use `PieceManager.Instance.GetPieceCategoriesMap` instead to get a complete map of all piece categories
+* Changed `PieceManager.PieceCategorySettings` to be obsolete as they are no longer used
+* Changed `PieceManager.RemovePieceCategory` to no longer remove categories where a piece is still assigned to the category. This is to prevent problems with other mods that might still use this category 
+* Changed Manager Init() methods to be private and not callable by mods. They were not intended to be called by mods and could cause issues
+* Changed Mock resolve depth from 3 to 5, this should catch some edge cases where fields are nested deeper
+* Changed empty CustomLocalization constructor to be marked obsolete, LocalizationManager.Instance.GetLocalization() should be used instead
+* Fixed empty translation values where not allowed, thus a valid key can be translated to an empty string
+* Fixed translations not being added to the Localization instance if it was already initialized
+* Slightly improved loading time of big mod packs when creating custom entities (again)
+
 ## Version 2.11.7
 * Added Valheim network version check to the disconnect window to better identify the cause of a disconnect. Only visible if both server and client are running Jotunn 2.11.7 or higher
 * Removed the Valheim version string check from the disconnect window, as the network version is used for the version check

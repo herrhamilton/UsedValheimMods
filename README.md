@@ -19,3 +19,4 @@ Valheim version: 0.216.9
 - [Display BepInEx Info 2.0.0](https://github.com/Valheim-Modding/Valheim.DisplayBepInExInfo/releases/tag/v2.0.0)
 - [Smoke Collision 1.6](https://www.nexusmods.com/valheim/mods/1834)
 - [Speedy Paths 1.0.8](https://www.nexusmods.com/valheim/mods/452)
+- [Slope Combat FIX 1.3.0](https://www.nexusmods.com/valheim/mods/727)

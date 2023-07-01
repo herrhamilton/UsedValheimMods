@@ -20,3 +20,4 @@ Valheim version: 0.216.9
 - [Smoke Collision 1.6](https://www.nexusmods.com/valheim/mods/1834)
 - [Speedy Paths 1.0.8](https://www.nexusmods.com/valheim/mods/452)
 - [Slope Combat FIX 1.3.0](https://www.nexusmods.com/valheim/mods/727)
+- [MultiCraft 1.2.0](https://www.nexusmods.com/valheim/mods/263)

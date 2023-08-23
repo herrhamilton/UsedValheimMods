@@ -14,7 +14,7 @@ Valheim version: 0.217.14 (n-12)
 - [Equipment and Quick Slots 2.1.7](https://www.nexusmods.com/valheim/mods/92)
 - [HereFishy 0.5.0](https://www.nexusmods.com/valheim/mods/218)
 - [Instant Monster Loot Drop 0.5.0](https://www.nexusmods.com/valheim/mods/164)
-- [MassFarming 1.7](https://www.nexusmods.com/valheim/mods/527)
+- ~[MassFarming 1.7](https://www.nexusmods.com/valheim/mods/527)~
 - [Teleport Everything 2.4.0](https://www.nexusmods.com/valheim/mods/1806)
 - [Display BepInEx Info 2.0.0](https://github.com/Valheim-Modding/Valheim.DisplayBepInExInfo/releases/tag/v2.0.0)
 - [Smoke Collision 1.7](https://www.nexusmods.com/valheim/mods/1834)

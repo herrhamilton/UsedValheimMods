@@ -1,4 +1,47 @@
 # Changelog
+
+## Version 2.14.3
+* Compatible with Valheim version 0.217.22, not working with an older version
+* Updated and compiled for BepInExPack 5.4.2200
+
+## Version 2.14.2
+* Fixed adding commands being aborted if a command tries to override an existing name
+* Removed the console clear command to improve mod compatibility. With the recent changes, the command wasn't always added anyway
+
+## Version 2.14.1
+* Fixed some errors when a Jotunn dependent mod has no BepInEx dependency set and loads before Jotunn. A warning will be logged
+* Fixed items were not added to the main menu ObjectDB if added in the OnVanillaPrefabsAvailable event and thus not visually shown on the player
+* Fixed input block did not prevent mouse wheel character zoom
+* Improved module initialisation logging by unifying messages
+
+## Version 2.14.0
+* Fixed the SynchronizationManager wasn't always initialised, resulting in no sync of admin configs
+
+## Version 2.13.0
+* Improved startup time by only initialising accessed managers. This reduces the load time without dependent mods by about 90% (on my machine under 100ms instead of 800ms), making Jötunn almost unnoticeable. When all managers are accessed, the overall startup time is the same as before. Also, if a Valheim update breaks some parts, only loaded managers are affected
+* Added `AssetUtils.LoadTextFromResources` overload without assembly parameter
+* Added CustomCreature constructor with AssetBundle parameter
+* Added `ZoneManager.CreateLocationContainer` with AssetBundle parameter
+* Added `CustomVegetation.IsValid` interface
+* Added `RequirementConfig.IsValid` interface
+* Added recipe RequireOnlyOneIngredient and QualityResultAmountMultiplier
+* Fixed GetOrAddComponent to use TryGetComponent (thx redseiko)
+* Improved error messages of entities loaded directly from AssetBundles: CustomClutter, CustomCreature, CustomItem, CustomPiece, CustomPieceTable, CustomPrefab, CustomVegetation
+* Improved PrefabManager.GetPrefab to search for items in ObjectDB if available
+* Improved startup time of SkillManager
+
+## Version 2.12.7
+* Fixed input block did not prevent the map from opening
+* Improved Kitbash error and warning messages to include the mod name and affected Kitbash settings
+
+## Version 2.12.6
+* Fixed input block did not prevent input from closing the inventory
+* Fixed PrefabManager.Cache to prefer materials with a non-error shader
+
+## Version 2.12.5
+* Fixed NRE using KeyHints
+* Fixed Mouse cursor not visible when blocking Input for UI
+
 ## Version 2.12.4
 * Fixed mock resolution to not fail when a member throws an exception on GetValue. This happens in rare cases, for example when mocking a TMP component (thx OrianaVenture)
 

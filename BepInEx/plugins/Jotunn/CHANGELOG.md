@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 2.15.2
+* Fixed ButtonConfigs with mouse keys were not correctly converted for the input changes in Valheim 0.217.38
+
+## Version 2.15.1
+* Fixed InputManager for Valheim 0.217.38
+
 ## Version 2.15.0
 * Added OnSyncingConfiguration event to the SynchronizationManager that is called before configs are synced on the server/client (thx Searica)
 * Added UpdatedPluginGUIDs to arguments of OnConfigurationSynchronized event (thx Searica)

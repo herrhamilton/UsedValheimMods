@@ -3,9 +3,7 @@ private helper repo to sync Valheim mods between clients
 
 ## Installed Mods
 
-NOT all mods are working.
-
-Equipment and Quick Slots needs update: Key not found
+All mods are working.
 
 ### Version 0.217.38
 
@@ -13,7 +11,7 @@ Equipment and Quick Slots needs update: Key not found
 - [Discard or Recycle Inventory Items 0.9.1](https://www.nexusmods.com/valheim/mods/45?tab=files)
 - [Display BepInEx Info 2.0.0](https://github.com/Valheim-Modding/Valheim.DisplayBepInExInfo/releases)
 - [Enhanced Bepinex Configuration Manager 0.1.1](https://www.nexusmods.com/site/mods/529?tab=files)
-- [Equipment and Quick Slots 2.1.12](https://www.nexusmods.com/valheim/mods/92?tab=files)
+- [Equipment and Quick Slots 2.1.13](https://www.nexusmods.com/valheim/mods/92?tab=files)
 - [HereFishy 0.5.0](https://www.nexusmods.com/valheim/mods/218?tab=files)
 - [Instant Monster Loot Drop 0.5.0](https://www.nexusmods.com/valheim/mods/164?tab=files)
 - [Jotunn 2.15.2](https://www.nexusmods.com/valheim/mods/1138?tab=files)

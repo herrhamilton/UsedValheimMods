@@ -17,6 +17,7 @@ All mods are working.
 - [Jotunn 2.15.2](https://www.nexusmods.com/valheim/mods/1138?tab=files)
 - [MassFarming 1.9](https://www.nexusmods.com/valheim/mods/527?tab=files)
 - [Plant Everything 1.16.2](https://www.nexusmods.com/valheim/mods/1042?tab=files)
+- [Sailing 1.1.7](https://valheim.thunderstore.io/package/Smoothbrain/Sailing/)
 - [Slope Combat FIX 1.3.0](https://www.nexusmods.com/valheim/mods/727?tab=files)
 - [Smoke Collision 1.8](https://www.nexusmods.com/valheim/mods/1834?tab=files)
 - [Speedy Paths 1.0.8](https://www.nexusmods.com/valheim/mods/452?tab=files)

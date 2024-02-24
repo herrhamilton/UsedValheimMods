@@ -1,5 +1,27 @@
 # Changelog
 
+## Version 2.17.0
+* Added PrefabManager.Cache.Clear to the API
+* Added a PrefabManager.Cache clear before ZoneSystem.SetupLocations to resolve mocked assets that are loaded later than usual
+* Changed the ZoneManager to always initialize the PrefabManager to prevent timing issues
+* Fixed warnings about missing textures from mocks on dedicated servers
+* Fixed category text not being resized automatically
+* Fixed category tokens omitting invalid characters like spaces from the original name, they are now replaced with an underscore
+
+## Version 2.16.2
+* Fixed a bug where newly spawned locations did not spawn their child net objects anymore after a relog without restart was performed
+
+## Version 2.16.1
+* Fixed mocks targeting an asset starting with an underscore were not split correctly and threw exceptions
+* Fixed mocks using the asset path were not cleaned and could fail to resolve
+
+## Version 2.16.0
+* Added mocking of ambiguous assets like meshes. This can be done via a new `JVLmock_PrefabName__ChildName` format where assets can be searched inside a named prefab. Multiple children can be provided for a specific path to a child, otherwise breadth search is used (thx OrianaVenture)
+* Added Weight and StackSize properties to ItemConfig, items are unaffected by default values
+* Added Icon property to ItemConfig for simpler access to Icons for non-variants
+* Added optional `BEPINEX_PATH` environment variable for build process (thx Defee)
+* Improved warnings of unresolvable mocks
+
 ## Version 2.15.2
 * Fixed ButtonConfigs with mouse keys were not correctly converted for the input changes in Valheim 0.217.38
 

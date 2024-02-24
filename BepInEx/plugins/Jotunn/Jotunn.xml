@@ -836,9 +836,24 @@
                 Multiplier for the amount of items created by the recipe based on the quality of the crafting materials. Defaults to <c>1</c>.
             </summary>
         </member>
+        <member name="P:Jotunn.Configs.ItemConfig.Weight">
+            <summary>
+                Weight of a single item in an inventory. Values lower than 0 are ignored when applying the config. Defaults to <c>-1</c>.
+            </summary>
+        </member>
+        <member name="F:Jotunn.Configs.ItemConfig.StackSize">
+            <summary>
+                Maximum stack size. Values lower than 1 are ignored when applying the config. Defaults to <c>-1</c>.
+            </summary>
+        </member>
         <member name="P:Jotunn.Configs.ItemConfig.Icons">
             <summary>
                 Icons for this item. If more than one icon is added, this item automatically has variants.
+            </summary>
+        </member>
+        <member name="P:Jotunn.Configs.ItemConfig.Icon">
+            <summary>
+                Gets or sets the first icon of the item. For item variants with multiple icons, use the <see cref="P:Jotunn.Configs.ItemConfig.Icons"/> property instead.
             </summary>
         </member>
         <member name="P:Jotunn.Configs.ItemConfig.StyleTex">
@@ -3456,6 +3471,15 @@
             <param name="childName">Name of the child object to search for.</param>
             <param name="searchType">Whether to preform a breadth first or depth first search. Default is breadth first.</param>
         </member>
+        <member name="M:Jotunn.ExposedGameObjectExtension.FindDeepChild(UnityEngine.GameObject,System.Collections.Generic.IEnumerable{System.String},Utils.IterativeSearchType)">
+            <summary>
+                Extension method to find nested children by an ordered list of names using either
+                a breadth-first or depth-first search. Default is breadth-first.
+            </summary>
+            <param name="gameObject"></param>
+            <param name="childNames">Names in order of the child object to search for.</param>
+            <param name="searchType">Whether to preform a breadth first or depth first search. Default is breadth first.</param>
+        </member>
         <member name="T:Jotunn.GameObjectGUIExtension">
             <summary>
                 Use only, if you know what you do.
@@ -5414,6 +5438,11 @@
                 Prefix used by the Mock System to recognize Mock gameObject that must be replaced at some point.
             </summary>
         </member>
+        <member name="F:Jotunn.Managers.MockManager.JVLMockSeparator">
+            <summary>
+                String used by the Mock System to recognize start of a relative path of a replacement for a Mock gameObject.
+            </summary>
+        </member>
         <member name="F:Jotunn.Managers.MockManager.MockPrefabContainer">
             <summary>
                 Internal container for mocked prefabs
@@ -5479,6 +5508,11 @@
                 Name of the prefab that could not be resolved. Mock prefix is already removed.
             </summary>
         </member>
+        <member name="P:Jotunn.Managers.MockSystem.MockResolveException.FailedMockPath">
+            <summary>
+                Path within the prefab that could not be resolved.
+            </summary>
+        </member>
         <member name="P:Jotunn.Managers.MockSystem.MockResolveException.MockType">
             <summary>
                 Type of the prefab that could not be resolved.
@@ -5497,6 +5531,15 @@
             </summary>
             <param name="message"></param>
             <param name="failedMockName"></param>
+            <param name="mockType"></param>
+        </member>
+        <member name="M:Jotunn.Managers.MockSystem.MockResolveException.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type)">
+            <summary>
+                Creates a new instance of the <see cref="T:Jotunn.Managers.MockSystem.MockResolveException" /> class.
+            </summary>
+            <param name="message"></param>
+            <param name="failedMockName"></param>
+            <param name="failedMockPath"></param>
             <param name="mockType"></param>
         </member>
         <member name="T:Jotunn.Managers.NetworkManager">
@@ -5781,7 +5824,7 @@
         <member name="E:Jotunn.Managers.PrefabManager.OnPrefabsRegistered">
             <summary>
                 Event that gets fired after registering all custom prefabs to <see cref="T:ZNetScene"/>.
-                Your code will execute every time a new ZNetScene is created (on every game start). 
+                Your code will execute every time a new ZNetScene is created (on every game start).
                 If you want to execute just once you will need to unregister from the event after execution.
             </summary>
         </member>
@@ -5894,14 +5937,15 @@
             <param name="gameObject"></param>
         </member>
         <member name="M:Jotunn.Managers.PrefabManager.InvokeOnVanillaObjectsAvailable">
-            <summary>
-                Safely invoke the <see cref="E:Jotunn.Managers.PrefabManager.OnVanillaPrefabsAvailable"/> event
-            </summary>
+             <summary>
+                 Safely invoke the <see cref="E:Jotunn.Managers.PrefabManager.OnVanillaPrefabsAvailable"/> event
+             </summary>
             
         </member>
         <member name="T:Jotunn.Managers.PrefabManager.Cache">
             <summary>
-                The global cache of prefabs per scene.
+                Global cache of Unity Objects by asset name.<br />
+                Built on first access of every type and is cleared on scene change.
             </summary>
         </member>
         <member name="M:Jotunn.Managers.PrefabManager.Cache.GetPrefab(System.Type,System.String)">
@@ -5936,6 +5980,21 @@
             <param name="newObject"></param>
             <param name="name"></param>
             <returns></returns>
+        </member>
+        <member name="M:Jotunn.Managers.PrefabManager.Cache.Clear">
+            <summary>
+                Clears the entire cache, resulting in a rebuilt on the next access.<br />
+                This can be useful if an asset is loaded late after a scene change and might be missing in the cache.
+                Rebuilding can be an expensive operation, so use with caution.
+            </summary>
+        </member>
+        <member name="M:Jotunn.Managers.PrefabManager.Cache.Clear``1">
+            <summary>
+                Clears the cache for a specific type, resulting in a rebuilt on the next access.<br />
+                This can be useful if an asset is loaded late after a scene change and might be missing in the cache.
+                Rebuilding can be an expensive operation, so use with caution.
+            </summary>
+            <typeparam name="T">The type of object to clear the cache for</typeparam>
         </member>
         <member name="T:Jotunn.Managers.RenderManager">
             <summary>

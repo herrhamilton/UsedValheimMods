@@ -1,5 +1,42 @@
 # Changelog
 
+## Version 2.19.3
+* Fixed piece categories to dynamically find the vanilla category count
+* Fixed clear area of locations was not applied since changes in Valheim 0.217.43
+* Fixed mock resolve of components on GameObjects, like workstations in recipes
+* Marked LocationConfig.Location as deprecated because the association is never valid
+
+## Version 2.19.2
+* Changed PrefabManager.Cache to prefer SoftReferences over searching loaded assets, in order to be more reliable future proof. This especially affects (directly mocked) Meshes, please see the [Mesh List](https://valheim-modding.github.io/Jotunn/data/prefabs/mesh-list.html) and update your mocks from the Internal Name to the SoftReference Name
+* Fixed item variants were not correctly applied when the item was added in Awake/Start
+* Fixed a potential error when calling PrefabManager.Cache.GetPrefab for an invalid Mesh
+
+## Version 2.19.1
+* Fixed an issue where the game would load infinitely
+* Fixed mocks were not being resolved if the assets are only used in locations
+* Fixed mock meshes not being resolved correctly in some cases
+* Fixed an error when modded prefabs are cloned before the vanilla asset system is ready
+* Fixed assemblies being referenced that are no longer shipped
+
+## Version 2.19.0
+* Fixed for Valheim 0.217.46, not working with older Valheim versions
+* Added AssetManager for direct interactions with the new SoftReference system. Existing entities and mocks are already handled implicitly
+
+## Version 2.18.2
+* Fixed more cases where components were not correctly removed in the RenderManager (thx bid)
+
+## Version 2.18.1
+* Fixed errors about failing to remove components in the RenderManager, which could occur in specific inheritance edge cases
+* Fixed mouse buttons from configs were not converted to the new input system
+* Fixed button config changes did not update the button at runtime in singleplayer
+
+## Version 2.18.0
+* Added GameObject mocking, i.e. objects in the hierarchy with the JVLmock_ prefix will be swapped with the real object
+* Added non-enforced mods to version check messages, so changed enforcement across mod versions can be detected and applied on the server
+* Added rendering of particle effects to the RenderManager (thx bid)
+* Added RenderManager.RenderRequest.ParticleSimulationTime to control the time of the particle simulation (thx bid)
+* Added events to ZoneManager: OnLocationsRegistered, OnClutterRegistered, OnVanillaVegetationAvailable and OnVegetationRegistered
+
 ## Version 2.17.0
 * Added PrefabManager.Cache.Clear to the API
 * Added a PrefabManager.Cache clear before ZoneSystem.SetupLocations to resolve mocked assets that are loaded later than usual

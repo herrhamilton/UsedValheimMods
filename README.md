@@ -21,4 +21,4 @@ All mods are working.
 - [Smoke Collision 1.8](https://www.nexusmods.com/valheim/mods/1834?tab=files)
 - [Speedy Paths 1.0.8](https://www.nexusmods.com/valheim/mods/452?tab=files)
 - [Teleport Everything 2.6.1](https://www.nexusmods.com/valheim/mods/1806?tab=files)
-- TODO [V+ Client 0.9.12.0](https://github.com/Grantapher/ValheimPlus/releases) mit [BepinExPack_Valheim 5.4.2202](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
+- [V+ Client 0.9.13.0](https://github.com/Grantapher/ValheimPlus/releases) mit [BepinExPack_Valheim 5.4.2202](https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)
